@@ -1,4 +1,4 @@
 setInterval(() => {
-    console.log('bye there!');
+    console.log('hi there!');
 }, 1000);
 
