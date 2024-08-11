@@ -14,6 +14,8 @@
     "watchit": "index.js"
   },
   "dependencies": {
+    "are-we-there-yet": "^4.0.2",
+    "caporal": "^1.4.0",
     "chokidar": "^3.6.0",
     "lodash.debounce": "^4.0.8"
   }

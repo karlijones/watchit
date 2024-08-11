@@ -2,7 +2,14 @@
 
 const debounce = require('lodash.debounce');
 const chokidar = require('chokidar');
+const program = require('caporal');
 
+program
+    .version('0.0.1')
+    .arguement('[filename', 'Name of a file to execute')
+    .action((args) => {
+        console.log(args);
+    });
 const start = debounce(()=> {
     console.log('STARTING USERS PROGRAM');
 }, 100);
