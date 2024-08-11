@@ -3,13 +3,16 @@
 const debounce = require('lodash.debounce');
 const chokidar = require('chokidar');
 const program = require('caporal');
+const fs = require('fs');
 
 program
     .version('0.0.1')
     .argument('[filename', 'Name of a file to execute')
-    .action(({ filename }) => {
+    .action(async ({ filename }) => {
         const name = filename || 'index.js';
         
+        await fs.promises.access(name);
+
         const start = debounce(()=> {
             console.log('STARTING USERS PROGRAM');
           }, 100);
